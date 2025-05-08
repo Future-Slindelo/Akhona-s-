@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Anniversary</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #808080;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        
+        h1 {
+            color: #ff66b3;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+			font style: Helvetica
+        }
+        
+        .slideshow-container {
+            max-width: 800px;
+            position: relative;
+            margin: auto;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            overflow: hidden;
+			background-color: #BCC6CC;
+        }
+        
+        .mySlides {
+            display: none;
+        }
+        
+        .mySlides img, .mySlides video {
+            width: 100%;
+            vertical-align: middle;
+            max-height: 500px;
+            object-fit: cover;
+        }
+        
+        .text-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            line-height: 1.8;
+            font-size: 1.1em;
+        }
+        
+        .signature {
+            font-style: italic;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #ff66b3;
+            font-size: 1.2em;
+        }
+        
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0,0,0,0.3);
+        }
+        
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+        
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Anniversary, Baby</h1>
+    
+    <div class="slideshow-container">
+        <!-- Slides -->
+        <div class="mySlides fade">
+            <img src="6th.jpeg" style="width:70%">
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="2nd.jpeg" style="width:40%">
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="3rd.jpeg" style="width:70%">
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="C:\Users\njabu\OneDrive\Documents\Sli\Tag.jpg" style="width:70%">
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="4th.jpeg" style="width:40%">
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="C:\Users\njabu\OneDrive\Documents\Sli\Us 2.jpg" style="width:30%">
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="C:\Users\njabu\OneDrive\Documents\Sli\akhona1.jpg" style="width:70%">
+        </div>
+        
+        <div class="mySlides fade">
+            <video controls style="width:100%">
+                <source src="C:\Users\njabu\OneDrive\Documents\Sli\Ma luv.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        
+        <div class="mySlides fade">
+            <video controls style="width:100%">
+                <source src="C:\Users\njabu\OneDrive\Documents\Sli\moment.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        
+        
+    
+    <div class="text-container">
+	
+        <p>I fell in love without knowing you,<br>
+        I fell in love with your energy,<br>
+        I fell in love without knowing I fell in love.</p>
+        
+        <p>Today symbolizes our first lap around time,<br>
+        Our first complete milestone, sisobabili.<br>
+        We have come very far, you and I.</p>
+        
+        <p>There were times when it was very hard and we had lost hope,<br>
+        but our love was stronger than that.</p>
+        
+        <p>I don't want to say much.<br>
+        Happy Anniversary!🙃❤️</p>
+        
+        <p class="signature">Ngyakuthanda, Sthandwa Sami!</p>
+    </div>
+    
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+        }
+        
+        // Auto slide change every 8 seconds
+        setInterval(function() {
+            plusSlides(1);
+        }, 5000);
+    </script>
+</body>
+</html>
